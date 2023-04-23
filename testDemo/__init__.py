@@ -1,0 +1,67 @@
+import turtle
+
+# 创建画布和画笔
+screen = turtle.Screen()
+pen = turtle.Turtle()
+# 绘制兔子的身体
+pen.color('white')
+pen.begin_fill()
+pen.circle(100)
+pen.end_fill()
+# 绘制兔子的耳朵
+pen.penup()
+pen.goto(30, 190)
+pen.pendown()
+pen.begin_fill()
+pen.right(30)
+pen.forward(80)
+pen.right(120)
+pen.forward(80)
+pen.right(150)
+pen.end_fill()
+pen.penup()
+pen.goto(-30, 190)
+pen.pendown()
+pen.begin_fill()
+pen.left(30)
+pen.forward(80)
+pen.left(120)
+pen.forward(80)
+pen.left(150)
+pen.end_fill()
+# 绘制兔子的眼睛
+pen.penup()
+pen.goto(-30, 60)
+pen.pendown()
+pen.color('black')
+pen.begin_fill()
+pen.circle(10)
+pen.end_fill()
+pen.penup()
+pen.goto(30, 60)
+pen.pendown()
+pen.begin_fill()
+pen.circle(10)
+pen.end_fill()
+
+# 绘制兔子的嘴巴和鼻子
+pen.penup()
+pen.goto(-15, 20)
+pen.pendown()
+pen.right(90)
+pen.forward(20)
+
+pen.penup()
+pen.goto(15, 20)
+pen.pendown()
+pen.forward(20)
+
+pen.penup()
+pen.goto(0, 0)
+pen.pendown()
+pen.right(90)
+pen.circle(5)
+
+# 隐藏画笔并退出画布
+pen.hideturtle()
+screen.exitonclick()
